@@ -1,0 +1,38 @@
+root = true
+
+# All files
+[*]
+indent_style = space
+insert_final_newline = true
+charset = utf-8
+
+# C# files
+[*.cs]
+indent_size = 4
+
+# Code style rules - Enforce explicit types instead of 'var'
+# IDE0007: Use explicit type instead of 'var' when type is apparent
+csharp_style_var_for_built_in_types = false:warning
+csharp_style_var_when_type_is_apparent = false:warning
+csharp_style_var_elsewhere = false:warning
+
+# Other useful C# code style rules
+csharp_prefer_braces = true:warning
+csharp_prefer_simple_using_statement = true:suggestion
+csharp_prefer_static_local_function = true:suggestion
+csharp_style_prefer_null_check_over_type_check = true:warning
+
+# Naming conventions
+dotnet_naming_rule.private_fields_start_with_underscore.severity = warning
+dotnet_naming_rule.private_fields_start_with_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_start_with_underscore.style = underscore_prefix
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+dotnet_naming_style.underscore_prefix.capitalization = camel_case
+dotnet_naming_style.underscore_prefix.required_prefix = _
+
+# Other quality rules
+dotnet_code_quality_unused_parameters = all:warning
+csharp_using_directive_placement = outside_namespace:warning
