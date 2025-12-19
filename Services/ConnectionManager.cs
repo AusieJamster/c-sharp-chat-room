@@ -21,7 +21,7 @@ public class ConnectionManager
 
     public WebSocket? GetConnectionById(string connectionId)
     {
-        _connections.TryGetValue(connectionId, out var socket);
+        _connections.TryGetValue(connectionId, out WebSocket? socket);
         return socket;
     }
 
